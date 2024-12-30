@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+const { getConnected}
+
 // GET /todos
 router.get("/todos", (req, res) => {
     res.status(200).json({ msg: "GET REQUEST TO /api/todos "});
