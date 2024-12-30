@@ -1,11 +1,15 @@
 const express = require("express");
 const router = express.Router();
+const { getCollection } = require("./models/index");
 
-const { getConnected}
+// const { getConnected}
 
 // GET /todos
-router.get("/todos", (req, res) => {
-    res.status(200).json({ msg: "GET REQUEST TO /api/todos "});
+router.get("/todos", async (req, res) => {
+    const collection = getCollection;
+    const todos = await collection.find({}).toArray();
+
+    res.status(200).json(todos);
 });
 
 
